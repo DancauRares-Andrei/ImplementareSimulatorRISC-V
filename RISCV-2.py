@@ -9,15 +9,30 @@ registers = {
     't0': 0,
     't1': 0,
     't2': 0,
+    's0': 0,
+    's1': 0,
+    'a0': 0,
+    'a1': 0,
+    'a2': 0,
+    'a3': 0,
+    'a4': 0,
+    'a5': 0,
+    'a6': 0,
+    'a7': 0,
+    's2': 0,
+    's3': 0,
+    's4': 0,
+    's5': 0,
+    's6': 0,
+    's7': 0,
+    's8': 0,
+    's9': 0,
+    's10': 0,
+    's11': 0,
     't3': 0,
     't4': 0,
     't5': 0,
-    't6': 0,
-    's0': 0,
-    's1': 0,
-    's2': 0,
-    's3': 0,
-    'a0': 0
+    't6': 0
 }
 
 # Definirea memoriei
@@ -117,3 +132,8 @@ for instruction in instructions:
 # Afișarea valorilor înregistrate la sfârșitul execuției
 for register, value in registers.items():
     print(f'{register}: {value}')
+
+# Afișarea conținutului memoriei
+print("Conținutul memoriei:")
+for i in range(len(memory)):
+    print(f'Mem[{i}]: {memory[i]}')
