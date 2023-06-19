@@ -1,0 +1,18 @@
+addi ra, zero, 10
+addi sp, ra, 20
+add gp, ra, sp
+sub tp, gp, sp
+lui t0, 100
+addi t1, zero, 50
+and t2, t0, t1
+or t3, t2, t0
+xor t4, t3, t2
+andi t5, t4, 3
+ori t6, t5, 6
+xori s0, t6, 9
+srli s1, s0, 2
+sll s2, s1, s1
+srl s3, s2, s1
+slli s1, s0, 2
+sw gp, 0(zero)
+lw a0, 0(zero)
