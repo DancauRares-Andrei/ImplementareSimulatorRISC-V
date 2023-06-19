@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <vector>
 #include <sstream>
+#include <algorithm>
 
 std::unordered_map<std::string, int> registers = {
     {"zero", 0},
@@ -115,8 +116,12 @@ void executeInstructions() {
 int main() {
     executeInstructions();
 
-    for (const auto& [registerName, value] : registers) {
-        std::cout << registerName << ": " << value << std::endl;
+    // Afișarea valorilor înregistrate în ordinea definită
+    for (const auto& registerName : {
+        "zero", "ra", "sp", "gp", "tp", "t0", "t1", "t2",
+        "t3", "t4", "t5", "t6", "s0", "s1", "s2", "s3", "a0"
+    }) {
+        std::cout << registerName << ": " << registers[registerName] << std::endl;
     }
 
     return 0;
